@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -264,8 +263,8 @@
         }
 
         .preview-btn {
-            background: #4013e5;
-            color: rgb(28, 5, 98);
+            background: #303f9f;
+            color: white;
             border: none;
             padding: 12px 30px;
             border-radius: 6px;
@@ -277,7 +276,7 @@
         }
 
         .preview-btn:hover {
-            background: #1616a9;
+            background: #283593;
         }
 
         /* Test Sections */
@@ -309,27 +308,68 @@
             margin-bottom: 10px;
         }
 
-        /* Contributors Section */
+        /* Contributors Section - UPDATED WITH BASE64 IMAGES */
         .contributors-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
             margin-top: 20px;
+            justify-content: center;
         }
 
         .contributor-card {
             background: #f5f5f5;
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 12px;
+            padding: 20px;
             flex: 1;
             min-width: 200px;
+            max-width: 220px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contributor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .contributor-img-frame {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #303f9f;
+            padding: 4px;
+            margin-bottom: 15px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contributor-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .contributor-card h4 {
             color: #303f9f;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .contributor-card p {
+            color: #555;
+            font-size: 0.9rem;
             margin-bottom: 5px;
+            line-height: 1.4;
         }
 
         /* Feedback Form */
@@ -418,6 +458,33 @@
             
             .test-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .contributor-card {
+                min-width: 160px;
+                max-width: 180px;
+            }
+            
+            .contributor-img-frame {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contributors-container {
+                gap: 15px;
+            }
+            
+            .contributor-card {
+                min-width: 140px;
+                max-width: 150px;
+                padding: 15px;
+            }
+            
+            .contributor-img-frame {
+                width: 90px;
+                height: 90px;
             }
         }
 
@@ -648,12 +715,12 @@
                                             </select>
                                         </div>
                                         <button class="preview-btn" onclick="calculate_limit()">
-                                            <a href= "/Vitual-Lab-To-calculate-the-limit-of-the-function1/Tutorial.html" style="color:#FFFFFF">Calculate The Limit</a></i>
+                                            <a href= "/Vitual-Lab-To-calculate-the-limit-of-the-function1/Tutorial.html" style="color:#FFFFFF">Calulate The Limit</a></i>
                                             <i class="fas fa-calculator"></i> 
                                         </button>
                                     </div>
                                     
-                                    <div style="text-align: center; padding: 20px; background: rgb(65, 11, 214); border-radius: 8px; width: 100%;">
+                                    <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; width: 100%;">
                                         <h3 style="color: #303f9f; margin-bottom: 15px;">Graph Preview</h3>
                                         <div style="height: 250px; background: linear-gradient(45deg, #f8f9fa 25%, #ffffff 25%, #ffffff 50%, #f8f9fa 50%, #f8f9fa 75%, #ffffff 75%, #ffffff); background-size: 20px 20px; display: flex; align-items: center; justify-content: center; border: 2px dashed #c5cae9; border-radius: 8px;">
                                             <div style="text-align: center; color: #666;">
@@ -774,7 +841,7 @@
                     </div>
                 </section>
 
-                <!-- Contributors Section -->
+                <!-- Contributors Section - UPDATED WITH BASE64 IMAGES -->
                 <section id="contributors" class="section-card">
                     <h2><i class="fas fa-users"></i> Contributors</h2>
                     <div class="section-content">
@@ -782,40 +849,56 @@
                         
                         <div class="contributors-container">
                             <div class="contributor-card">
+                                <div class="contributor-img-frame">
+                                    <img class="contributor-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiMzMDNmOWYiLz4KPHRleHQgeD0iNjAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+VTxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIG9mZnNldD0iMSIvPjwvdGV4dD4KPC9zdmc+" alt="Uday Surve">
+                                </div>
                                 <h4>Uday Surve</h4>
                                 <p>PRN: 125B1F133</p>
-                    
+                                
                             </div>
                             
                             <div class="contributor-card">
+                                <div class="contributor-img-frame">
+                                    <img class="contributor-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiMwMDdiOWYiLz4KPHRleHQgeD0iNjAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+TTxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIG9mZnNldD0iMSIvPjwvdGV4dD4KPC9zdmc+" alt="Mayank Rakhunde">
+                                </div>
                                 <h4>Mayank Rakhunde</h4>
                                 <p>PRN: 125B1F064</p>
                                 <p>Simulation Programming</p>
                             </div>
                             
                             <div class="contributor-card">
+                                <div class="contributor-img-frame">
+                                    <img class="contributor-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiNmNDMzMzYiLz4KPHRleHQgeD0iNjAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+SzxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIG9mZnNldD0iMSIvPjwvdGV4dD4KPC9zdmc+" alt="Kunal Bawaskar">
+                                </div>
                                 <h4>Kunal Bawaskar</h4>
                                 <p>PRN: 125B1F131</p>
                                 
                             </div>
                             
                             <div class="contributor-card">
+                                <div class="contributor-img-frame">
+                                    <img class="contributor-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiMwMDhjNTEiLz4KPHRleHQgeD0iNjAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+SDxzdG9wIHN0b3AtY29sb3I9IiNmZmZmZmYiIG9mZnNldD0iMSIvPjwvdGV4dD4KPC9zdmc+" alt="Harshvardhan Patil">
+                                </div>
                                 <h4>Harshvardhan Patil</h4>
                                 <p>PRN: 125B1F128</p>
                                 
                             </div>
                             
                             <div class="contributor-card">
+                                <div class="contributor-img-frame">
+                                    <img class="contributor-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiNmNTdjMDAiLz4KPHRleHQgeD0iNjAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNDAiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+RGs8L3RleHQ+Cjwvc3ZnPg==" alt="MR Dinesh Kute Sir">
+                                </div>
                                 <h4>MR Dinesh Kute Sir</h4>
                                 <p>Professor of Mathlab</p>
-                                
+                              
                             </div>
                             
                             <div class="contributor-card">
+                                <div class="contributor-img-frame">
+                                    <img class="contributor-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiByeD0iNjAiIGZpbGw9IiM3MTFjNzIiLz4KPHRleHQgeD0iNjAiIHk9IjY1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMzYiIGZvbnQtd2VpZ2h0PSJib2xkIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+TUx8L3RleHQ+Cjwvc3ZnPg==" alt="Mathlab">
+                                </div>
                                 <h4>Mathlab</h4>
-                                <p>PIMPRI CHINCHWAD COLLEGE OF ENGINEERING
-                            
-                                </p>
+                                <p>PIMPRI CHINCHWAD COLLEGE OF ENGINEERING</p>
                                 <p>Project Sponsorship</p>
                             </div>
                         </div>
@@ -876,7 +959,7 @@
                             
                             <button type="submit" class="submit-btn">
                                 <i class="fas fa-paper-plane"></i> 
-                                <a href="https://forms.gle/EMcaCPbshwXe4B418" style="color:#FFFFFF">SUBMIT YOUR FEEDBACK</a>
+                                <a href="https://docs.google.com/forms/d/1_9PfPTFwoY8evb-s7cMIyLfY_igId26X-oOs4HULJc4/edit" style="color:#FFFFFF"></a>
                             </button>
                         </form>
                         
