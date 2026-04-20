@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Lab On Calculating Limits </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="Virtual lab.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="pccoelogo-img-frame">
+                <img src="" alt="">
+                </div>
+                 
+                <h2><i class="fas fa-flask"></i> Virtual Lab</h2>
+                <p>Mathematics • Calculus • Limits</p>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#aim" class="nav-link active">
+                        <i class="fas fa-bullseye"></i> 
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#theory" class="nav-link">
+                        <i class="fas fa-book"></i> Theory
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pretest" class="nav-link">
+                        <i class="fas fa-question-circle"></i> Pre-test
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#simulation" class="nav-link">
+                        <i class="fas fa-play-circle"></i> Simulation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#posttest" class="nav-link">
+                        <i class="fas fa-clipboard-check"></i> Post-test
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#references" class="nav-link">
+                        <i class="fas fa-link"></i> References
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contributors" class="nav-link">
+                        <i class="fas fa-users"></i> Contributors
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#feedback" class="nav-link">
+                        <i class="fas fa-comment-dots"></i> Feedback
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>Virtual Lab On Calculating Limit</h1>
+                <p>Engineering Mathematics</p>
+            </header>
+
+            <div class="content-area">
+                <section id="aim" class="section-card">
+                    <h2><i class="fas fa-bullseye"></i> Aim </h2>
+                    <div class="section-content">
+                        <p>
+                            This virtual lab provides an interactive platform for understanding and calculating limits of functions, specifically focusing on indeterminate forms such as 0/0, ∞/∞, 0⋅∞, ∞−∞, 00, 1∞, and ∞0. Students will learn to resolve these forms using algebraic manipulation, L'Hôpital's rule, and series expansion methods, while visualizing function behavior near critical points. By the end, students will confidently determine limits of indeterminate forms and apply these concepts to practical engineering problems.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="theory" class="section-card">
+                    <h2><i class="fas fa-book"></i> Theoretical Background</h2>
+                    <div class="section-content">
+                        <p>
+                           A limit is the foundational concept of calculus that describes the behavior of a function $f(x)$ as the input $x$ approaches a specific value $c$, regardless of whether the function is defined at that exact point. Mathematically
+                        </p>
+                        <p text-align="center" style="font-size: 1.2rem; font-weight: inherit; color: #faf7f7;">
+                           <mark>$\lim_{x \to c} f(x) = L$</mark> 
+                        </p>
+                        <p>
+                            For a limit to formally exist, the left-hand limit and right-hand limit must be equal; if the function approaches two different values from opposite directions, the limit is said not to exist.
+                        </p>
+                        <p text-align="center" style="font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
+                            Limits are <mark>the primary tool used to define continuity</mark>. A function is continuous at a point if there is no "gap" or "jump" in the graph, which occurs when the limit as $x$ approaches $c$ is exactly equal to the actual value of $f(c)$. When direct substitution into a function results in an indeterminate form like $0/0$, it suggests that a limit exists but is hidden by a hole in the graph. In these cases, algebraic techniques—such as factoring or rationalizing—are used to simplify the expression and reveal the "intended" value of the function.
+                        </p>
+                        <p>
+                            Finally, limits are used to analyze end behavior by observing what happens as $x$ moves toward infinity or negative infinity. These limits at infinity help identify horizontal asymptotes, showing the level at which a function stabilizes as the input grows extremely large. By bridging the gap between static algebra and the study of change, limits provide the necessary foundation for more advanced concepts like derivatives and integrals.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="pretest" class="section-card">
+                    <h2><i class="fas fa-question-circle"></i> Pre-test Assessment</h2>
+                    <div class="section-content">
+                        <p>Test your current understanding of limits before proceeding with the simulation. This will help identify areas you need to focus on during the lab.</p>
+                        
+                        <div class="test-container">
+                            <div class="test-card">
+                                <h3>Question 1</h3>
+                                <p>What is lim<sub>x→2</sub> (x² - 4)/(x - 2)?</p>
+                                <p><strong>Answer:</strong> 4 (After simplifying to (x+2) and substituting x=2)</p>
+                            </div>
+                            
+                            <div class="test-card">
+                                <h3>Question 2</h3>
+                                <p>Evaluate lim<sub>x→0</sub> sin(3x)/x</p>
+                                <p><strong>Answer:</strong> 3 (Using lim sin(θ)/θ = 1)</p>
+                            </div>
+                            
+                            <div class="test-card">
+                                <h3>Question 3</h3>
+                                <p>What is lim<sub>x→∞</sub> (2x² + 3x)/(x² - 5)?</p>
+                                <p><strong>Answer:</strong> 2 (Divide numerator and denominator by x²)</p>
+                            </div>
+                            
+                            <div class="test-card">
+                                <h3>Question 4</h3>
+                                <p>Find lim<sub>x→1⁺</sub> 1/(x-1) and lim<sub>x→1⁻</sub> 1/(x-1)</p>
+                                <p><strong>Answer:</strong> ∞ and -∞ (One-sided limits differ)</p>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 20px; font-style: italic;">Note: These are sample questions. The actual pre-test in a full implementation would include an interactive quiz with scoring.</p>
+                    </div>
+                </section>
+
+                <section id="simulation" class="section-card">
+                    <h2><i class="fas fa-play-circle"></i> Simulation on Limit</h2>
+                    <div class="section-content">
+                        <p>Click to calculate limit...</p>
+                        
+                        <div class="simulation-container">
+                            <div class="calculator-preview">
+                                <button class="preview-btn" onclick="document.location='Virtual Lab Calc.html'">
+                                    <p>Simulator</p>
+                                    <i class="fas fa-calculator"></i> 
+                                </button>
+                            </div>
+                            <p id="resultDisplay" style="margin-top: 15px; font-family: 'Courier New', monospace; font-size: 1.1rem; color: #303f9f; font-weight: bold;">
+                                Result will be displayed here
+                            </p>
+                            
+                            <div style="width: 100%;">
+                                <h3 style="color: #303f9f; margin-bottom: 15px;">Try These Examples:</h3>
+                                <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                    <button class="example-btn" onclick="loadExample('sin(x)/x', '0')">sin(x)/x as x→0</button>
+                                    <button class="example-btn" onclick="loadExample('(x^2-4)/(x-2)', '2')">(x²-4)/(x-2) as x→2</button>
+                                    <button class="example-btn" onclick="loadExample('1/x', '0')">1/x as x→0</button>
+                                    <button class="example-btn" onclick="loadExample('(1-cos(x))/x', '0')">(1-cos(x))/x as x→0</button>
+                                    <button class="example-btn" onclick="loadExample('(3*x^2+2*x)/(x^2-1)', 'inf')">(3x²+2x)/(x²-1) as x→∞</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 30px; background: #e8eaf6; padding: 20px; border-radius: 8px;">
+                            <h3 style="color: #303f9f; margin-bottom: 10px;">Learning Objectives Achieved:</h3>
+                            <ul>
+                                <li>Visualize how functions behave near specific points</li>
+                                <li>Understand the difference between left-hand and right-hand limits</li>
+                                <li>Identify when limits do not exist (discontinuities)</li>
+                                <li>Calculate limits algebraically and verify graphically</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="posttest" class="section-card">
+                    <h2><i class="fas fa-clipboard-check"></i> Post-test Assessment</h2>
+                    <div class="section-content">
+                        <p>After completing the simulation, test your understanding with these questions to evaluate what you've learned.</p>
+                        
+                        <div class="test-container">
+                            <div class="test-card">
+                                <h3>Question 1</h3>
+                                <p>Find lim<sub>x→3</sub> (x³ - 27)/(x - 3)</p>
+                                <p><em>Hint: Factor using difference of cubes formula</em></p>
+                            </div>
+                            <div class="test-card">
+                                <h3>Question 2</h3>
+                                <p>Evaluate lim<sub>x→0</sub> (tan(x))/x</p>
+                                <p><em>Hint: Use tan(x) = sin(x)/cos(x)</em></p>
+                            </div>
+                            <div class="test-card">
+                                <h3>Question 3</h3>
+                                <p>Determine if lim<sub>x→2</sub> |x-2|/(x-2) exists</p>
+                                <p><em>Hint: Check left and right limits separately</em></p>
+                            </div>
+                            <div class="test-card">
+                                <h3>Question 4</h3>
+                                <p>Find lim<sub>x→∞</sub> √(x²+1) - x</p>
+                                <p><em>Hint: Multiply by conjugate</em></p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 20px; padding: 15px; background: #e8f5e8; border-radius: 8px; border-left: 4px solid #4caf50;">
+                            <h4 style="color: #2e7d32; margin-bottom: 10px;">Answers to Post-test:</h4>
+                            <ol>
+                                <li><strong>27</strong> (After factoring: (x-3)(x²+3x+9)/(x-3) = x²+3x+9 → 9+9+9=27)</li>
+                                <li><strong>1</strong> (tan(x)/x = sin(x)/(x cos(x)) → 1/cos(0) = 1)</li>
+                                <li><strong>Does not exist</strong> (Left limit = -1, right limit = 1)</li>
+                                <li><strong>0</strong> (After rationalizing: 1/(√(x²+1)+x) → 0 as x→∞)</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="references" class="section-card">
+                    <h2><i class="fas fa-link"></i> References & Further Reading</h2>
+                    <div class="section-content">
+                        <h3>Textbooks</h3>
+                        <ul>
+                            <li>Stewart, J. (2020). <em>Calculus: Early Transcendentals</em>. Cengage Learning.</li>
+                            <li>Thomas, G. B., Weir, M. D., & Hass, J. (2018). <em>Thomas' Calculus</em>. Pearson.</li>
+                            <li>Anton, H., Bivens, I., & Davis, S. (2016). <em>Calculus: Early Transcendentals</em>. Wiley.</li>
+                        </ul>
+                        <h3>Online Resources</h3>
+                        <ul>
+                            <li>Khan Academy - Limits and Continuity: <a href="https://www.khanacademy.org/math/calculus-1" target="_blank">Khan Academy</a></li>
+                            <li>MIT OpenCourseWare: <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/" target="_blank">MIT OCW Calculus</a></li>
+                        </ul>
+                        <h3>Interactive Tools</h3>
+                        <ul>
+                            <li>Desmos Graphing Calculator: <a href="https://www.desmos.com/calculator" target="_blank">Desmos</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="contributors" class="section-card">
+                    <h2><i class="fas fa-users"></i> Contributors</h2>
+                    <div class="section-content">
+                        <p>This virtual lab was developed by a team dedicated to enhancing Mathematics Study through interactive technology.</p>
+                        <p>Our Aim is to make education fun and interactive</p>
+                        
+                        <div class="contributors-grid">
+
+                            <div class="contributor-card">
+                                <div class="contributor-img-frame">
+                                    <img src="Mayank.jpg" alt="Mayank Rakhunde">
+                                </div>
+                                <h4>Mayank Rakhunde</h4>
+                                <p>PRN: 125B1F064</p>
+                                <p> <a href="" target="_blank">Linkedin</a></p>
+                                <p> <a href="" target="_blank">Email</a></p>
+                            </div>
+                            
+                            <div class="contributor-card">
+                                <div class="contributor-img-frame"></div>
+                                <h4>Uday Surve</h4>
+                                <p>PRN: 125B1F133</p>
+                                <p> <a href="" target="_blank">Linkedin</a></p>
+                                <p> <a href="" target="_blank">Email</a></p>
+                            </div>
+
+                            <div class="contributor-card">
+                                <div class="contributor-img-frame"></div>
+                                <h4>Kunal Bawaskar</h4>
+                                <p>PRN: 125B1F131</p>
+                                <p> <a href="" target="_blank">Linkedin</a></p>
+                                <p> <a href="" target="_blank">Email</a></p>
+                            </div>
+                            <div class="contributor-card">
+                                <div class="contributor-img-frame"></div>
+                                <h4>Harshvardhan Patil</h4>
+                                <p>PRN: 125B1F128</p>
+                                <p> <a href="" target="_blank">Linkedin</a></p>
+                                <p> <a href="" target="_blank">Email</a></p>
+                            </div>
+                            <div class="contributor-card featured">
+                                <div class="contributor-img-frame">
+                                    <img src="" alt="">
+                                </div>
+                                <h4>MR Dinesh Kute Sir</h4>
+                                <p>Professor of Mathlab</p>
+                                <p>Faculty Advisor</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="feedback" class="section-card">
+                    <h2><i class="fas fa-comment-dots"></i> Feedback & Evaluation</h2>
+                    <div class="section-content">
+                        <p>Your feedback is important to us! Please share your experience.</p>
+                        <form class="feedback-form" id="feedbackForm">
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <a href="https://docs.google.com/forms/d/1_9PfPTFwoY8evb-s7cMIyLfY_igId26X-oOs4HULJc4/edit" style="color:#ffffff; text-decoration:none;"> PLEASE ENTER YOUR FEEDBACK HERE</a>
+                            </button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></div>
+
+    <script>
+        // Navigation Scroll Logic
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    e.preventDefault();
+                    window.scrollTo({ top: targetSection.offsetTop - 20, behavior: 'smooth' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section-card');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let currentSection = '';
+            sections.forEach(section => {
+                if (scrollY >= section.offsetTop - 100 && scrollY < section.offsetTop + section.clientHeight) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === currentSection) link.classList.add('active');
+            });
+            const st = document.getElementById('scrollTop');
+            if (window.scrollY > 300) st.classList.add('show'); else st.classList.remove('show');
+        });
+
+        document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+        function calculateLimit() {
+            const res = document.getElementById('resultDisplay');
+            res.textContent = "Processing calculation...";
+            setTimeout(() => { res.innerHTML = "<strong>Result updated!</strong><br><span style='color:green'>Simulation complete.</span>"; }, 500);
+        }
+
+        function loadExample(f, p) {
+            calculateLimit();
+        }
+    </script>
+</body>
+</html>
