@@ -1,6 +1,4 @@
-/* VIRTUAL LAB STYLESHEET 
-    Preserving original logic with layout fixes 
-*/
+
 
 * {
     margin: 0;
@@ -22,9 +20,9 @@ body {
 
 
 
-/* Sidebar Fixes */
+
 .sidebar {
-    width: 280px;
+    width: 230px;
     background: linear-gradient(180deg, #1a237e 0%, #283593 100%);
     color: white;
     padding: 20px 0;
@@ -43,10 +41,10 @@ body {
 }
 
 .pccoelogo-img-frame {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 70%;
-    border: 3px solid #dc542e;
+    border: 3px solid #2e98df;
     margin: 0 auto 15px;
     overflow: hidden;
     background: white;
@@ -83,10 +81,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Main Content Adjustment */
+
 .main-content {
     flex: 1;
-    margin-left: 280px; /* Offset for sidebar */
+    margin-left: 180px; 
 }
 
 .header {
@@ -112,7 +110,7 @@ body {
     border-left: 5px solid #303f9f;
 }
 
-/* Simulation Section Styles */
+
 .simulation-container {
     display: flex;
     flex-direction: column;
@@ -149,7 +147,7 @@ body {
     color: white;
 }
 
-/* Contributors Grid Fixes */
+
 .contributors-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -165,12 +163,12 @@ body {
     width: 100%;
     max-width: 220px;
     text-align: center;
-    border: 1px solid #eee;
+    border: 1px solid #51a6e2;
 }
 
 .contributor-img-frame {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 3px solid #303f9f;
     margin: 0 auto 15px;
@@ -197,7 +195,7 @@ body {
 }
 
 .feedback-tab {
-  /* Positioning */
+  
   position: fixed;
   right: 0;
   top: 50%;
@@ -205,14 +203,14 @@ body {
   transform-origin: right bottom;
   z-index: 1000;
 
-  /* Look & Feel */
-  background-color: #007bff; /* Change to your brand color */
+  
+  background-color: #007bff; 
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   font-family: Arial, sans-serif;
   font-weight: bold;
-  border-radius: 5px 5px 0 0; /* Rounded top corners */
+  border-radius: 5px 5px 0 0; 
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
@@ -222,7 +220,7 @@ body {
   color: white;
 }
 
-/* Scroll Top Button */
+
 .scroll-top {
     position: fixed;
     bottom: 30px;
@@ -246,7 +244,3 @@ body {
     visibility: visible;
 }
 
-/* Spacer comments to reach 
-   the requested line length 
-   and maintain clean formatting 
-*/
