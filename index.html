@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Lab On Calculating Limits </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="Virtual_lab.css">
+    <link rel="stylesheet" href="Virtual lab.css">
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
                 <div class="pccoelogo-img-frame">
-                <img src="" alt="">
+                <img src="https://i.postimg.cc/P5sxwGQS/download.jpg" alt="PCCOE Logo">
                 </div>
                  
                 <h2><i class="fas fa-flask"></i> Virtual Lab</h2>
@@ -106,28 +106,242 @@
                         <p>Test your current understanding of limits before proceeding with the simulation. This will help identify areas you need to focus on during the lab.</p>
                         
                         <div class="test-container">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+        <span class="q-number">1.</span>
+        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                             </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                            
+                            
                             <div class="test-card">
-                                <h3>Question 1</h3>
-                                <p>What is lim<sub>x→2</sub> (x² - 4)/(x - 2)?</p>
-                                <p><strong>Answer:</strong> 4 (After simplifying to (x+2) and substituting x=2)</p>
+                                 <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+        <span class="q-number">2.</span>
+        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
                             </div>
                             
                             <div class="test-card">
-                                <h3>Question 2</h3>
-                                <p>Evaluate lim<sub>x→0</sub> sin(3x)/x</p>
-                                <p><strong>Answer:</strong> 3 (Using lim sin(θ)/θ = 1)</p>
+                                 <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+        <span class="q-number">3.</span>
+        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
                             </div>
                             
                             <div class="test-card">
-                                <h3>Question 3</h3>
-                                <p>What is lim<sub>x→∞</sub> (2x² + 3x)/(x² - 5)?</p>
-                                <p><strong>Answer:</strong> 2 (Divide numerator and denominator by x²)</p>
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                        <span class="q-number">4.</span>
+                                        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                 </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                             </div>
+
+                                    <!-- Hidden by default via CSS -->
+                              <div class="handwritten-solution hidden">
+                                 <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                              </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                     <span class="q-number">5.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
                             </div>
-                            
-                            <div class="test-card">
-                                <h3>Question 4</h3>
-                                <p>Find lim<sub>x→1⁺</sub> 1/(x-1) and lim<sub>x→1⁻</sub> 1/(x-1)</p>
-                                <p><strong>Answer:</strong> ∞ and -∞ (One-sided limits differ)</p>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                      <span class="q-number">6.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                  </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                               </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                     <span class="q-number">7.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                      <span class="q-number">8.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                      <span class="q-number">9.</span>
+                                       <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                      <span class="q-number">10.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+
                             </div>
                         </div>
                         
@@ -142,7 +356,7 @@
                         
                         <div class="simulation-container">
                             <div class="calculator-preview">
-                                <button class="preview-btn" onclick="document.location='Virtual_Lab_Calc.html'">
+                                <button class="preview-btn" onclick="document.location='Virtual Lab Calc.html'">
                                     <p>Simulator</p>
                                     <i class="fas fa-calculator"></i> 
                                 </button>
@@ -181,26 +395,237 @@
                         <p>After completing the simulation, test your understanding with these questions to evaluate what you've learned.</p>
                         
                         <div class="test-container">
-                            <div class="test-card">
-                                <h3>Question 1</h3>
-                                <p>Find lim<sub>x→3</sub> (x³ - 27)/(x - 3)</p>
-                                <p><em>Hint: Factor using difference of cubes formula</em></p>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+        <span class="q-number">1.</span>
+        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
                             </div>
-                            <div class="test-card">
-                                <h3>Question 2</h3>
-                                <p>Evaluate lim<sub>x→0</sub> (tan(x))/x</p>
-                                <p><em>Hint: Use tan(x) = sin(x)/cos(x)</em></p>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
                             </div>
+                           </div>
                             <div class="test-card">
-                                <h3>Question 3</h3>
-                                <p>Determine if lim<sub>x→2</sub> |x-2|/(x-2) exists</p>
-                                <p><em>Hint: Check left and right limits separately</em></p>
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                     <span class="q-number">2.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
                             </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
                             <div class="test-card">
-                                <h3>Question 4</h3>
-                                <p>Find lim<sub>x→∞</sub> √(x²+1) - x</p>
-                                <p><em>Hint: Multiply by conjugate</em></p>
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                    <span class="q-number">3.</span>
+                                    <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
                             </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                       <span class="q-number">4.</span>
+                                       <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                       <span class="q-number">5.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                     <span class="q-number">6.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                      <span class="q-number">7.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                      <span class="q-number">8.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                     <span class="q-number">9.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           <div class="test-card">
+                                  <!-- START OF INTERACTIVE CARD -->
+                              <div class="card" id="q11">
+                                   <div class="question-row">
+                                      <span class="q-number">10.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             </div>
+
+                              <div class="options-container">
+                             <!-- Add 'onclick' to trigger the check -->
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
+                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                            </div>
+
+                                    <!-- Hidden by default via CSS -->
+                           <div class="handwritten-solution hidden">
+                             <span class="sol-label">Sol:</span> 
+                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
+                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
+                            </div>
+                           </div>
+                           
                         </div>
                         
                         <div style="margin-top: 20px; padding: 15px; background: #e8f5e8; border-radius: 8px; border-left: 4px solid #4caf50;">
@@ -246,16 +671,18 @@
 
                             <div class="contributor-card">
                                 <div class="contributor-img-frame">
-                                    <img src="Mayank.jpg" alt="Mayank Rakhunde">
+                                    <img src="https://i.postimg.cc/RCy2WSKC/Mayank.jpg" alt="Mayank Rakhunde">
                                 </div>
                                 <h4>Mayank Rakhunde</h4>
                                 <p>PRN: 125B1F064</p>
-                                <p> <a href="" target="_blank">Linkedin</a></p>
-                                <p> <a href="" target="_blank">Email</a></p>
+                                <p> <a href="https://drive.google.com/file/d/1Tn6avSDPCoFPhHtBatOexmflG6O2vrwc/view?usp=drive_link" target="_blank">Linkedin</a></p>
+                                <p> <a href="mayaalrak1729@gmail.com" target="_blank">Email</a></p>
                             </div>
                             
                             <div class="contributor-card">
-                                <div class="contributor-img-frame"></div>
+                                <div class="contributor-img-frame">
+                                    <img src="https://i.postimg.cc/qBSWNJyt/27013.jpg" alt="Uday Surve">
+                                </div>
                                 <h4>Uday Surve</h4>
                                 <p>PRN: 125B1F133</p>
                                 <p> <a href="" target="_blank">Linkedin</a></p>
@@ -263,14 +690,18 @@
                             </div>
 
                             <div class="contributor-card">
-                                <div class="contributor-img-frame"></div>
+                                <div class="contributor-img-frame">
+                                    <img src="https://i.postimg.cc/c12Pvxwg/27012.jpg" alt="Kunal Bawaskar">
+                                </div>
                                 <h4>Kunal Bawaskar</h4>
                                 <p>PRN: 125B1F131</p>
                                 <p> <a href="" target="_blank">Linkedin</a></p>
                                 <p> <a href="" target="_blank">Email</a></p>
                             </div>
                             <div class="contributor-card">
-                                <div class="contributor-img-frame"></div>
+                                <div class="contributor-img-frame">
+                                    <img src="https://i.postimg.cc/1zQWp45d/27011.jpg" alt="Harshvardhan Patil">
+                                </div>
                                 <h4>Harshvardhan Patil</h4>
                                 <p>PRN: 125B1F128</p>
                                 <p> <a href="" target="_blank">Linkedin</a></p>
@@ -283,6 +714,7 @@
                                 <h4>MR Dinesh Kute Sir</h4>
                                 <p>Professor of Mathlab</p>
                                 <p>Faculty Advisor</p>
+                                 
                             </div>
                         </div>
                     </div>
@@ -350,5 +782,6 @@
             calculateLimit();
         }
     </script>
+    <script src="Virtual lab.js"></script>
 </body>
 </html>
