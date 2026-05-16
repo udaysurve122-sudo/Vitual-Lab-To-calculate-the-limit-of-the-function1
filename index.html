@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Lab On Calculating Limits </title>
+    <title>Virtual Lab On Calculating Limits</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="Virtual lab.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
             <div class="logo">
                 <div class="pccoelogo-img-frame">
-                <img src="https://i.postimg.cc/P5sxwGQS/download.jpg" alt="PCCOE Logo">
+                    <img src="https://i.postimg.cc/P5sxwGQS/download.jpg" alt="PCCOE Logo">
                 </div>
-                 
                 <h2><i class="fas fa-flask"></i> Virtual Lab</h2>
                 <p>Mathematics • Calculus • Limits</p>
             </div>
-            
             <ul class="nav-menu">
                 <li class="nav-item">
                     <a href="#aim" class="nav-link active">
@@ -74,7 +82,7 @@
                     <h2><i class="fas fa-bullseye"></i> Aim </h2>
                     <div class="section-content">
                         <p>
-                            This virtual lab provides an interactive platform for understanding and calculating limits of functions, specifically focusing on indeterminate forms such as 0/0, ∞/∞, 0⋅∞, ∞−∞, 00, 1∞, and ∞0. Students will learn to resolve these forms using algebraic manipulation, L'Hôpital's rule, and series expansion methods, while visualizing function behavior near critical points. By the end, students will confidently determine limits of indeterminate forms and apply these concepts to practical engineering problems.
+                            This virtual lab provides an interactive platform for understanding and calculating limits of functions, specifically focusing on indeterminate forms such as $0/0$, $\infty/\infty$, $0\cdot\infty$, $\infty-\infty$, $0^0$, $1^\infty$, and $\infty^0$. Students will learn to resolve these forms using algebraic manipulation, L'Hôpital's rule, and series expansion methods, while visualizing function behavior near critical points. By the end, students will confidently determine limits of indeterminate forms and apply these concepts to practical engineering problems.
                         </p>
                     </div>
                 </section>
@@ -82,20 +90,20 @@
                 <section id="theory" class="section-card">
                     <h2><i class="fas fa-book"></i> Theoretical Background</h2>
                     <div class="section-content">
-                        <p>
-                           A limit is the foundational concept of calculus that describes the behavior of a function $f(x)$ as the input $x$ approaches a specific value $c$, regardless of whether the function is defined at that exact point. Mathematically
+                        <p style="text-align: center; font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
+                           A limit is the foundational concept of calculus that describes the behavior of a function $f(x)$ as the input $x$ approaches a specific value $c$, regardless of whether the function is defined at that exact point. Mathematically:
                         </p>
-                        <p text-align="center" style="font-size: 1.2rem; font-weight: inherit; color: #faf7f7;">
-                           <mark>$\lim_{x \to c} f(x) = L$</mark> 
+                        <p style="text-align: center; font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
+                           <mark>$$\top \lim_{x \to c} f(x) = L \top$$</mark> 
                         </p>
-                        <p>
-                            For a limit to formally exist, the left-hand limit and right-hand limit must be equal; if the function approaches two different values from opposite directions, the limit is said not to exist.
+                        <p style="text-align: center; font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
+                             For a limit to formally exist, the left-hand limit and right-hand limit must be equal; if the function approaches two different values from opposite directions, the limit is said not to exist.
                         </p>
-                        <p text-align="center" style="font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
-                            Limits are <mark>the primary tool used to define continuity</mark>. A function is continuous at a point if there is no "gap" or "jump" in the graph, which occurs when the limit as $x$ approaches $c$ is exactly equal to the actual value of $f(c)$. When direct substitution into a function results in an indeterminate form like $0/0$, it suggests that a limit exists but is hidden by a hole in the graph. In these cases, algebraic techniques—such as factoring or rationalizing—are used to simplify the expression and reveal the "intended" value of the function.
+                        <p style="text-align: center; font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
+                             Limits are the primary tool used to define continuity. A function is continuous at a point if there is no "gap" or "jump" in the graph, which occurs when the limit as $x$ approaches $c$ is exactly equal to the actual value of $f(c)$. When direct substitution into a function results in an indeterminate form like $0/0$, it suggests that a limit exists but is hidden by a hole in the graph. In these cases, algebraic techniques—such as factoring or rationalizing—are used to simplify the expression and reveal the "intended" value of the function.
                         </p>
-                        <p>
-                            Finally, limits are used to analyze end behavior by observing what happens as $x$ moves toward infinity or negative infinity. These limits at infinity help identify horizontal asymptotes, showing the level at which a function stabilizes as the input grows extremely large. By bridging the gap between static algebra and the study of change, limits provide the necessary foundation for more advanced concepts like derivatives and integrals.
+                        <p style="text-align: center; font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
+                             Finally, limits are used to analyze end behavior by observing what happens as $x$ moves toward infinity or negative infinity. These limits at infinity help identify horizontal asymptotes, showing the level at which a function stabilizes as the input grows extremely large. By bridging the gap between static algebra and the study of change, limits provide the necessary foundation for more advanced concepts like derivatives and integrals.
                         </p>
                     </div>
                 </section>
@@ -106,243 +114,209 @@
                         <p>Test your current understanding of limits before proceeding with the simulation. This will help identify areas you need to focus on during the lab.</p>
                         
                         <div class="test-container">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-        <span class="q-number">1.</span>
-        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
-                             </div>
-
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                             </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                            
-                            
-                            <div class="test-card">
-                                 <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-        <span class="q-number">2.</span>
-        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
-                             </div>
-
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                            </div>
-                            
-                            <div class="test-card">
-                                 <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-        <span class="q-number">3.</span>
-        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
-                             </div>
-
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                            </div>
-                            
-                            <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                        <span class="q-number">4.</span>
-                                        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="pre-q1">
+                                 <div class="question-row">
+                                     <span class="q-number">1.</span>
+                                     <span class="math-text">$\lim_{x \to 2} (3x + 1) = ?$</span>
                                  </div>
-
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q1')">A) 5</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q1')">B) 6</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q1')">C) 7</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q1')">D) 8</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     This function is continuous. Substitute $x = 2$ directly: $3(2) + 1 = 6 + 1 = 7$. Correct Option is C.
+                                 </div>
+                             </div>
+                             
+                             <div class="card" id="pre-q2">
+                                 <div class="question-row">
+                                     <span class="q-number">2.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{\sin x}{x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q2')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q2')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q2')">C) $\infty$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q2')">D) Does not exist</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     This is a fundamental standard trigonometric limit identity. As $x \to 0$, $\frac{\sin x}{x} \to 1$. Correct Option is B.
+                                 </div>
+                             </div>
+                             
+                             <div class="card" id="pre-q3">
+                                 <div class="question-row">
+                                     <span class="q-number">3.</span>
+                                     <span class="math-text">$\lim_{x \to 1} \frac{x^2 - 1}{x - 1} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q3')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q3')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q3')">C) 2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q3')">D) Undefined</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Form $0/0$. Factor the numerator: $\frac{(x-1)(x+1)}{x-1} = x + 1$. Substitute $x = 1 \implies 1 + 1 = 2$. Correct Option is C.
+                                 </div>
+                             </div>
+                             
+                             <div class="card" id="pre-q4">
+                                 <div class="question-row">
+                                      <span class="q-number">4.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{1 - \cos x}{x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q4')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q4')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q4')">C) $\infty$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q4')">D) -1</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Form $0/0$. Apply L'Hôpital's Rule: differentiate the numerator to get $\sin x$ and the denominator to get $1$. Evaluating $\lim_{x \to 0} \frac{\sin x}{1} = \frac{0}{1} = 0$. Correct Option is A.
+                                 </div>
                              </div>
 
-                                    <!-- Hidden by default via CSS -->
-                              <div class="handwritten-solution hidden">
-                                 <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                              </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="pre-q5">
+                                 <div class="question-row">
                                      <span class="q-number">5.</span>
-                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                     <span class="math-text">$\lim_{x \to \infty} \frac{2x + 3}{x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q5')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q5')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q5')">C) 2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q5')">D) $\infty$</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Form $\infty/\infty$. Divide terms by $x$: $\lim_{x \to \infty} (2 + \frac{3}{x}) = 2 + 0 = 2$. Correct Option is C.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                      <span class="q-number">6.</span>
-                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="pre-q6">
+                                  <div class="question-row">
+                                       <span class="q-number">6.</span>
+                                       <span class="math-text">$\lim_{x \to 0} \frac{e^x - 1}{x} = ?$</span>
                                   </div>
-
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                               </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                     <span class="q-number">7.</span>
-                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                  <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q6')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q6')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q6')">C) $e$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q6')">D) $\infty$</div>
+                                  </div>
+                                  <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     This is a standard exponential identity limit, evaluating to $1$. Alternatively, applying L'Hôpital's Rule gives $\frac{e^x}{1} \to \frac{1}{1} = 1$. Correct Option is B.
+                                  </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
+                             <div class="card" id="pre-q7">
+                                 <div class="question-row">
+                                      <span class="q-number">7.</span>
+                                      <span class="math-text">$\lim_{x \to 3} (x^2 - 9) = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">B) 3</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">C) 6</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">D) 9</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Substitute $x = 3$ directly into the continuous polynomial: $3^2 - 9 = 9 - 9 = 0$. Correct Option is A.
+                                 </div>
+                             </div>
 
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="pre-q8">
+                                 <div class="question-row">
                                       <span class="q-number">8.</span>
-                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                      <span class="math-text">$\lim_{x \to 0} \frac{\tan x}{x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q8')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q8')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q8')">C) $\infty$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q8')">D) -1</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Can be written as $\lim_{x \to 0} \frac{\sin x}{x} \cdot \frac{1}{\cos x} = 1 \cdot 1 = 1$. Correct Option is B.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="pre-q9">
+                                 <div class="question-row">
                                       <span class="q-number">9.</span>
-                                       <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                       <span class="math-text">$\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q9')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q9')">B) 2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q9')">C) 4</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q9')">D) Does not exist</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Form $0/0$. Factor the numerator: $\frac{(x-2)(x+2)}{x-2} = x + 2$. Substitute $x = 2 \implies 2 + 2 = 4$. Correct Option is C.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="pre-q10">
+                                 <div class="question-row">
                                       <span class="q-number">10.</span>
-                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                      <span class="math-text">$\lim_{x \to \infty} \frac{5}{x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q10')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q10')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q10')">C) 5</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q10')">D) $\infty$</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Any finite constant divided by a value growing infinitely large approaches 0. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
+                             <div class="card" id="pre-q11">
+                                 <div class="question-row">
+                                      <span class="q-number">11.</span>
+                                      <span class="math-text">$\lim_{x \to 0} \ln(1 + x) = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q11')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q11')">B) 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q11')">C) $\infty$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q11')">D) -1</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Substitute $x = 0$ directly into the log function: $\ln(1 + 0) = \ln(1) = 0$. Correct Option is A.
+                                 </div>
+                             </div>
 
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-
-                            </div>
+                             <div class="card" id="pre-q12">
+                                 <div class="question-row">
+                                      <span class="q-number">12.</span>
+                                      <span class="math-text">$\lim_{x \to -1} \frac{x + 1}{x^2 - 1} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q12')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q12')">B) -1/2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q12')">C) 1/2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-q12')">D) Undefined</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Form $0/0$. Factor the denominator: $\frac{x+1}{(x+1)(x-1)} = \frac{1}{x-1}$. Substitute $x = -1 \implies \frac{1}{-1-1} = -\frac{1}{2}$. Correct Option is B.
+                                 </div>
+                             </div>
                         </div>
                         
                         <p style="margin-top: 20px; font-style: italic;">Note: These are sample questions. The actual pre-test in a full implementation would include an interactive quiz with scoring.</p>
@@ -368,11 +342,11 @@
                             <div style="width: 100%;">
                                 <h3 style="color: #303f9f; margin-bottom: 15px;">Try These Examples:</h3>
                                 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-                                    <button class="example-btn" onclick="loadExample('sin(x)/x', '0')">sin(x)/x as x→0</button>
-                                    <button class="example-btn" onclick="loadExample('(x^2-4)/(x-2)', '2')">(x²-4)/(x-2) as x→2</button>
-                                    <button class="example-btn" onclick="loadExample('1/x', '0')">1/x as x→0</button>
-                                    <button class="example-btn" onclick="loadExample('(1-cos(x))/x', '0')">(1-cos(x))/x as x→0</button>
-                                    <button class="example-btn" onclick="loadExample('(3*x^2+2*x)/(x^2-1)', 'inf')">(3x²+2x)/(x²-1) as x→∞</button>
+                                    <button class="example-btn" onclick="loadExample('sin(x)/x', '0')">$\frac{\sin x}{x}$ as $x \to 0$</button>
+                                    <button class="example-btn" onclick="loadExample('x^2-4)/(x-2)', '2')">$\frac{x^2-4}{x-2}$ as $x \to 2$</button>
+                                    <button class="example-btn" onclick="loadExample('1/x', '0')">$\frac{1}{x}$ as $x \to 0$</button>
+                                    <button class="example-btn" onclick="loadExample('(1-cos(x))/x', '0')">$\frac{1-\cos x}{x}$ as $x \to 0$</button>
+                                    <button class="example-btn" onclick="loadExample('(3*x^2+2*x)/(x^2-1)', 'inf')">$\frac{3x^2+2x}{x^2-1}$ as $x \to \infty$</button>
                                 </div>
                             </div>
                         </div>
@@ -395,247 +369,175 @@
                         <p>After completing the simulation, test your understanding with these questions to evaluate what you've learned.</p>
                         
                         <div class="test-container">
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-        <span class="q-number">1.</span>
-        <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="post-q1">
+                                 <div class="question-row">
+                                     <span class="q-number">1.</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x}{\sin x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q1')">A) Form: 0/0, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q1')">B) Form: $\infty/\infty$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q1')">C) Form: $0 \cdot \infty$, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q1')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Direct substitution gives 0/0. Since $\lim_{x \to 0} \frac{\sin x}{x} = 1$, the reciprocal limit $\lim_{x \to 0} \frac{x}{\sin x} = \frac{1}{1} = 1$. Alternatively, applying L'Hôpital's Rule gives $\lim_{x \to 0} \frac{1}{\cos x} = 1$. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                            <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="post-q2">
+                                 <div class="question-row">
                                      <span class="q-number">2.</span>
-                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                     <span class="math-text">$\lim_{x \to 0} \frac{x^2}{1 - \cos x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q2')">A) 0/0, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q2')">B) 0/0, Limit = 2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q2')">C) $\infty/\infty$, Limit = 1/2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q2')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Direct substitution results in 0/0. Applying L'Hôpital's Rule once gives $\lim_{x \to 0} \frac{2x}{\sin x}$ (still 0/0). Differentiating a second time yields $\lim_{x \to 0} \frac{2}{\cos x} = \frac{2}{1} = 2$. Correct Option is B.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                            <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="post-q3">
+                                 <div class="question-row">
                                     <span class="q-number">3.</span>
-                                    <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                    <span class="math-text">$\lim_{x \to \infty} \frac{e^x}{x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q3')">A) Form: $\infty/\infty$, Limit = $\infty$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q3')">B) Form: 0/0, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q3')">C) Form: $\infty - \infty$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q3')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     As $x \to \infty$, both terms grow boundlessly, matching the form $\infty/\infty$. Applying L'Hôpital's rule: differentiate $e^x \to e^x$ and $x \to 1$. Evaluating $\lim_{x \to \infty} \frac{e^x}{1} = \infty$. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="post-q4">
+                                 <div class="question-row">
                                        <span class="q-number">4.</span>
-                                       <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                       <span class="math-text">$\lim_{x \to 2} \frac{x - 2}{x^2 - 4} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q4')">A) Form: 0/0, Limit = 2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q4')">B) Form: 0/0, Limit = 1/4</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q4')">C) Not indeterminate, Limit = 4</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q4')">D) Form: $\infty - \infty$, Limit = 0</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Direct substitution produces the 0/0 indeterminate form. Factoring the denominator gives $\frac{x-2}{(x-2)(x+2)} = \frac{1}{x+2}$. Evaluating the limit at $x = 2$ gives $\frac{1}{2+2} = \frac{1}{4}$. Correct Option is B.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
+                             <div class="card" id="post-q5">
+                                 <div class="question-row">
                                        <span class="q-number">5.</span>
-                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                                       <span class="math-text">$\lim_{x \to 0^+} (x \ln x) = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">A) Form: $0 \cdot \infty$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">B) Form: 0/0, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">C) Form: $\infty - \infty$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Substitution yields $0 \cdot (-\infty)$. To apply L'Hôpital's rule, rewrite the product as a fraction: $\frac{\ln x}{1/x}$, creating an $\infty/\infty$ form. Differentiating gives $\frac{1/x}{-1/x^2} = -x$. Evaluating $\lim_{x \to 0^+} (-x) = 0$. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                     <span class="q-number">6.</span>
-                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="post-q6">
+                                 <div class="question-row">
+                                       <span class="q-number">6.</span>
+                                       <span class="math-text">$\lim_{x \to \infty} (\sqrt{x^2 + x} - x) = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">A) Form: $\infty - \infty$, Limit = 1/2</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">B) Form: $\infty - \infty$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">C) Form: $\infty/\infty$, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Matches the form $\infty - \infty$. Multiply and divide by the conjugate expression: $\frac{(\sqrt{x^2+x}-x)(\sqrt{x^2+x}+x)}{\sqrt{x^2+x}+x} = \frac{x^2+x-x^2}{\sqrt{x^2+x}+x} = \frac{x}{\sqrt{x^2+x}+x}$. Dividing terms by $x$ simplifies it to $\frac{1}{\sqrt{1+1/x}+1}$. As $x \to \infty$, $1/x \to 0$, giving $\frac{1}{1+1} = \frac{1}{2}$. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                      <span class="q-number">7.</span>
-                                      <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="post-q7">
+                                 <div class="question-row">
+                                       <span class="q-number">7.</span>
+                                       <span class="math-text">$\lim_{x \to 0^+} x^x = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">A) Form: $0^0$, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">B) Form: $1^\infty$, Limit = $e$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">C) Form: $\infty^0$, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Direct evaluation yields the indeterminate power configuration $0^0$. Let $y = x^x$, meaning $\ln y = x \ln x$. We established in Question 5 that $\lim_{x \to 0^+} x \ln x = 0$. Therefore, $\lim y = e^0 = 1$. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                      <span class="q-number">8.</span>
-                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="post-q8">
+                                 <div class="question-row">
+                                       <span class="q-number">8.</span>
+                                       <span class="math-text">$\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">A) Form: $1^\infty$, Limit = $e$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">B) Form: $0^0$, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">C) Form: $\infty^0$, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     As $x \to \infty$, inside the expression $(1 + 0) \to 1$ and exponent goes to $\infty$, highlighting the form $1^\infty$. This corresponds fundamentally to the natural mathematical definition of the transcendental value $e$. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                     <span class="q-number">9.</span>
-                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="post-q9">
+                                 <div class="question-row">
+                                       <span class="q-number">9.</span>
+                                       <span class="math-text">$\lim_{x \to 0} \frac{x}{e^x - 1} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">A) Form: 0/0, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">B) Form: $\infty/\infty$, Limit = $e$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">C) Not indeterminate</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">D) Form: $0 \cdot \infty$, Limit = 0</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Substitution presents the form 0/0. Applying L'Hôpital's Rule involves differentiating numerator and denominator independently, resulting in $\lim_{x \to 0} \frac{1}{e^x}$. Direct evaluation yields $\frac{1}{e^0} = \frac{1}{1} = 1$. Correct Option is A.
+                                 </div>
                              </div>
 
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           <div class="test-card">
-                                  <!-- START OF INTERACTIVE CARD -->
-                              <div class="card" id="q11">
-                                   <div class="question-row">
-                                      <span class="q-number">10.</span>
-                                     <span class="math-text">$\lim_{x \to 0} \frac{x^3}{x - \sin x}$</span>
+                             <div class="card" id="post-q10">
+                                 <div class="question-row">
+                                       <span class="q-number">10.</span>
+                                       <span class="math-text">$\lim_{x \to \infty} \frac{x}{\ln x} = ?$</span>
+                                 </div>
+                                 <div class="options-container">
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">A) Form: $\infty/\infty$, Limit = $\infty$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">B) Form: 0/0, Limit = 1</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">C) Form: $\infty - \infty$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">D) Not indeterminate</div>
+                                 </div>
+                                 <div class="handwritten-solution hidden">
+                                     <span class="sol-label">Sol:</span> 
+                                     Both expressions scale infinitely matching the form $\infty/\infty$. Applying L'Hôpital's rule by evaluating derivatives: $x \to 1$ and $\ln x \to 1/x$. This transforms the system to $\lim_{x \to \infty} \frac{1}{1/x} = \lim_{x \to \infty} (x) = \infty$. Correct Option is A.
+                                 </div>
                              </div>
-
-                              <div class="options-container">
-                             <!-- Add 'onclick' to trigger the check -->
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">A) Form: 0/0, Limit = 6</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">B) Form: 0/0, Limit = 0</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">C) Not indeterminate</div>
-                                 <div class="opt" onclick="checkAnswer(this, 'q11')">D) ∞ - ∞, Limit = 1</div>
-                            </div>
-
-                                    <!-- Hidden by default via CSS -->
-                           <div class="handwritten-solution hidden">
-                             <span class="sol-label">Sol:</span> 
-                                  Apply L'Hôpital's Rule three times. The third derivative of $x^3$ is $6$, 
-                                  and $x - \sin x$ eventually becomes $\cos x \to 1$. Thus, $6/1 = 6$.
-                            </div>
-                           </div>
-                           
-                        </div>
-                        
-                        <div style="margin-top: 20px; padding: 15px; background: #e8f5e8; border-radius: 8px; border-left: 4px solid #4caf50;">
-                            <h4 style="color: #2e7d32; margin-bottom: 10px;">Answers to Post-test:</h4>
-                            <ol>
-                                <li><strong>27</strong> (After factoring: (x-3)(x²+3x+9)/(x-3) = x²+3x+9 → 9+9+9=27)</li>
-                                <li><strong>1</strong> (tan(x)/x = sin(x)/(x cos(x)) → 1/cos(0) = 1)</li>
-                                <li><strong>Does not exist</strong> (Left limit = -1, right limit = 1)</li>
-                                <li><strong>0</strong> (After rationalizing: 1/(√(x²+1)+x) → 0 as x→∞)</li>
-                            </ol>
                         </div>
                     </div>
                 </section>
@@ -668,7 +570,6 @@
                         <p>Our Aim is to make education fun and interactive</p>
                         
                         <div class="contributors-grid">
-
                             <div class="contributor-card">
                                 <div class="contributor-img-frame">
                                     <img src="https://i.postimg.cc/RCy2WSKC/Mayank.jpg" alt="Mayank Rakhunde">
@@ -676,7 +577,7 @@
                                 <h4>Mayank Rakhunde</h4>
                                 <p>PRN: 125B1F064</p>
                                 <p> <a href="https://drive.google.com/file/d/1Tn6avSDPCoFPhHtBatOexmflG6O2vrwc/view?usp=drive_link" target="_blank">Linkedin</a></p>
-                                <p> <a href="mayaalrak1729@gmail.com" target="_blank">Email</a></p>
+                                <p> <a href="mailto:mayaalrak1729@gmail.com" target="_blank">Email</a></p>
                             </div>
                             
                             <div class="contributor-card">
@@ -709,12 +610,11 @@
                             </div>
                             <div class="contributor-card featured">
                                 <div class="contributor-img-frame">
-                                    <img src="" alt="">
+                                    <img src="https://i.postimg.cc/kGhNbg5t/dinesh-kute.jpg" alt="MR. Dinesh Kute">
                                 </div>
                                 <h4>MR Dinesh Kute Sir</h4>
                                 <p>Professor of Mathlab</p>
                                 <p>Faculty Advisor</p>
-                                 
                             </div>
                         </div>
                     </div>
@@ -739,7 +639,6 @@
     <div class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></div>
 
     <script>
-        // Navigation Scroll Logic
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
                 document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
