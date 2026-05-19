@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtual Lab On Calculating Limits</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="Virtual_lab.css">
+    <link rel="stylesheet" href="Virtual lab.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
@@ -94,7 +94,7 @@
                            A limit is the foundational concept of calculus that describes the behavior of a function $f(x)$ as the input $x$ approaches a specific value $c$, regardless of whether the function is defined at that exact point. Mathematically:
                         </p>
                         <p style="text-align: center; font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
-                           <mark>$$\top \lim_{x \to c} f(x) = L \top$$</mark> 
+                           <mark>$$\lim_{x \to c} f(x) = L$$</mark> 
                         </p>
                         <p style="text-align: center; font-size: 1.2rem; font-weight: inherit; color: #5a5a5a;">
                              For a limit to formally exist, the left-hand limit and right-hand limit must be equal; if the function approaches two different values from opposite directions, the limit is said not to exist.
@@ -222,10 +222,10 @@
                                       <span class="math-text">$\lim_{x \to 3} (x^2 - 9) = ?$</span>
                                  </div>
                                  <div class="options-container">
-                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">A) 0</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">B) 3</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">C) 6</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'pre-q7')">D) 9</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-7')">A) 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-7')">B) 3</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-7')">C) 6</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'pre-7')">D) 9</div>
                                  </div>
                                  <div class="handwritten-solution hidden">
                                      <span class="sol-label">Sol:</span> 
@@ -330,7 +330,7 @@
                         
                         <div class="simulation-container">
                             <div class="calculator-preview">
-                                <button class="preview-btn" onclick="document.location='Virtual_Lab_Calc.html'">
+                                <button class="preview-btn" onclick="document.location='Virtual Lab Calc.html'">
                                     <p>Simulator</p>
                                     <i class="fas fa-calculator"></i> 
                                 </button>
@@ -443,99 +443,14 @@
                                        <span class="math-text">$\lim_{x \to 0^+} (x \ln x) = ?$</span>
                                  </div>
                                  <div class="options-container">
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">A) Form: $0 \cdot \infty$, Limit = 0</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">B) Form: 0/0, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">C) Form: $\infty - \infty$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">A) Form: $0 \cdot (-\infty)$, Limit = 0</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">B) Form: $0 \cdot (-\infty)$, Limit = $-\infty$</div>
+                                     <div class="opt" onclick="checkAnswer(this, 'post-q5')">C) Form: $0/0$, Limit = 1</div>
                                      <div class="opt" onclick="checkAnswer(this, 'post-q5')">D) Not indeterminate</div>
                                  </div>
                                  <div class="handwritten-solution hidden">
                                      <span class="sol-label">Sol:</span> 
-                                     Substitution yields $0 \cdot (-\infty)$. To apply L'Hôpital's rule, rewrite the product as a fraction: $\frac{\ln x}{1/x}$, creating an $\infty/\infty$ form. Differentiating gives $\frac{1/x}{-1/x^2} = -x$. Evaluating $\lim_{x \to 0^+} (-x) = 0$. Correct Option is A.
-                                 </div>
-                             </div>
-
-                             <div class="card" id="post-q6">
-                                 <div class="question-row">
-                                       <span class="q-number">6.</span>
-                                       <span class="math-text">$\lim_{x \to \infty} (\sqrt{x^2 + x} - x) = ?$</span>
-                                 </div>
-                                 <div class="options-container">
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">A) Form: $\infty - \infty$, Limit = 1/2</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">B) Form: $\infty - \infty$, Limit = 0</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">C) Form: $\infty/\infty$, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q6')">D) Not indeterminate</div>
-                                 </div>
-                                 <div class="handwritten-solution hidden">
-                                     <span class="sol-label">Sol:</span> 
-                                     Matches the form $\infty - \infty$. Multiply and divide by the conjugate expression: $\frac{(\sqrt{x^2+x}-x)(\sqrt{x^2+x}+x)}{\sqrt{x^2+x}+x} = \frac{x^2+x-x^2}{\sqrt{x^2+x}+x} = \frac{x}{\sqrt{x^2+x}+x}$. Dividing terms by $x$ simplifies it to $\frac{1}{\sqrt{1+1/x}+1}$. As $x \to \infty$, $1/x \to 0$, giving $\frac{1}{1+1} = \frac{1}{2}$. Correct Option is A.
-                                 </div>
-                             </div>
-
-                             <div class="card" id="post-q7">
-                                 <div class="question-row">
-                                       <span class="q-number">7.</span>
-                                       <span class="math-text">$\lim_{x \to 0^+} x^x = ?$</span>
-                                 </div>
-                                 <div class="options-container">
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">A) Form: $0^0$, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">B) Form: $1^\infty$, Limit = $e$</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">C) Form: $\infty^0$, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q7')">D) Not indeterminate</div>
-                                 </div>
-                                 <div class="handwritten-solution hidden">
-                                     <span class="sol-label">Sol:</span> 
-                                     Direct evaluation yields the indeterminate power configuration $0^0$. Let $y = x^x$, meaning $\ln y = x \ln x$. We established in Question 5 that $\lim_{x \to 0^+} x \ln x = 0$. Therefore, $\lim y = e^0 = 1$. Correct Option is A.
-                                 </div>
-                             </div>
-
-                             <div class="card" id="post-q8">
-                                 <div class="question-row">
-                                       <span class="q-number">8.</span>
-                                       <span class="math-text">$\lim_{x \to \infty} \left(1 + \frac{1}{x}\right)^x = ?$</span>
-                                 </div>
-                                 <div class="options-container">
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">A) Form: $1^\infty$, Limit = $e$</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">B) Form: $0^0$, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">C) Form: $\infty^0$, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q8')">D) Not indeterminate</div>
-                                 </div>
-                                 <div class="handwritten-solution hidden">
-                                     <span class="sol-label">Sol:</span> 
-                                     As $x \to \infty$, inside the expression $(1 + 0) \to 1$ and exponent goes to $\infty$, highlighting the form $1^\infty$. This corresponds fundamentally to the natural mathematical definition of the transcendental value $e$. Correct Option is A.
-                                 </div>
-                             </div>
-
-                             <div class="card" id="post-q9">
-                                 <div class="question-row">
-                                       <span class="q-number">9.</span>
-                                       <span class="math-text">$\lim_{x \to 0} \frac{x}{e^x - 1} = ?$</span>
-                                 </div>
-                                 <div class="options-container">
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">A) Form: 0/0, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">B) Form: $\infty/\infty$, Limit = $e$</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">C) Not indeterminate</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q9')">D) Form: $0 \cdot \infty$, Limit = 0</div>
-                                 </div>
-                                 <div class="handwritten-solution hidden">
-                                     <span class="sol-label">Sol:</span> 
-                                     Substitution presents the form 0/0. Applying L'Hôpital's Rule involves differentiating numerator and denominator independently, resulting in $\lim_{x \to 0} \frac{1}{e^x}$. Direct evaluation yields $\frac{1}{e^0} = \frac{1}{1} = 1$. Correct Option is A.
-                                 </div>
-                             </div>
-
-                             <div class="card" id="post-q10">
-                                 <div class="question-row">
-                                       <span class="q-number">10.</span>
-                                       <span class="math-text">$\lim_{x \to \infty} \frac{x}{\ln x} = ?$</span>
-                                 </div>
-                                 <div class="options-container">
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">A) Form: $\infty/\infty$, Limit = $\infty$</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">B) Form: 0/0, Limit = 1</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">C) Form: $\infty - \infty$, Limit = 0</div>
-                                     <div class="opt" onclick="checkAnswer(this, 'post-q10')">D) Not indeterminate</div>
-                                 </div>
-                                 <div class="handwritten-solution hidden">
-                                     <span class="sol-label">Sol:</span> 
-                                     Both expressions scale infinitely matching the form $\infty/\infty$. Applying L'Hôpital's rule by evaluating derivatives: $x \to 1$ and $\ln x \to 1/x$. This transforms the system to $\lim_{x \to \infty} \frac{1}{1/x} = \lim_{x \to \infty} (x) = \infty$. Correct Option is A.
+                                     Form $0 \cdot (-\infty)$. Rewrite as $\lim_{x \to 0^+} \frac{\ln x}{1/x}$ (Form $-\infty/\infty$). Apply L'Hôpital's Rule: differentiate numerator to $\frac{1}{x}$ and denominator to $-\frac{1}{x^2}$. Simplifying gives $\lim_{x \to 0^+} (-x) = 0$. Correct Option is A.
                                  </div>
                              </div>
                         </div>
@@ -543,22 +458,12 @@
                 </section>
 
                 <section id="references" class="section-card">
-                    <h2><i class="fas fa-link"></i> References & Further Reading</h2>
+                    <h2><i class="fas fa-link"></i> References</h2>
                     <div class="section-content">
-                        <h3>Textbooks</h3>
                         <ul>
-                            <li>Stewart, J. (2020). <em>Calculus: Early Transcendentals</em>. Cengage Learning.</li>
-                            <li>Thomas, G. B., Weir, M. D., & Hass, J. (2018). <em>Thomas' Calculus</em>. Pearson.</li>
-                            <li>Anton, H., Bivens, I., & Davis, S. (2016). <em>Calculus: Early Transcendentals</em>. Wiley.</li>
-                        </ul>
-                        <h3>Online Resources</h3>
-                        <ul>
-                            <li>Khan Academy - Limits and Continuity: <a href="https://www.khanacademy.org/math/calculus-1" target="_blank">Khan Academy</a></li>
-                            <li>MIT OpenCourseWare: <a href="https://ocw.mit.edu/courses/mathematics/18-01-single-variable-calculus-fall-2006/" target="_blank">MIT OCW Calculus</a></li>
-                        </ul>
-                        <h3>Interactive Tools</h3>
-                        <ul>
-                            <li>Desmos Graphing Calculator: <a href="https://www.desmos.com/calculator" target="_blank">Desmos</a></li>
+                            <li>Thomas, G. B., & Finney, R. L. (2018). <i>Calculus and Analytic Geometry</i>. Addison-Wesley.</li>
+                            <li>Stewart, J. (2020). <i>Calculus: Early Transcendentals</i> (9th ed.). Cengage Learning.</li>
+                            <li>MIT OpenCourseWare: <a href="https://ocw.mit.edu" target="_blank">Single Variable Calculus</a></li>
                         </ul>
                     </div>
                 </section>
@@ -566,121 +471,23 @@
                 <section id="contributors" class="section-card">
                     <h2><i class="fas fa-users"></i> Contributors</h2>
                     <div class="section-content">
-                        <p>This virtual lab was developed by a team dedicated to enhancing Mathematics Study through interactive technology.</p>
-                        <p>Our Aim is to make education fun and interactive</p>
-                        
-                        <div class="contributors-grid">
-                            <div class="contributor-card">
-                                <div class="contributor-img-frame">
-                                    <img src="https://i.postimg.cc/RCy2WSKC/Mayank.jpg" alt="Mayank Rakhunde">
-                                </div>
-                                <h4>Mayank Rakhunde</h4>
-                                <p>PRN: 125B1F064</p>
-                                <p> <a href="https://drive.google.com/file/d/1Tn6avSDPCoFPhHtBatOexmflG6O2vrwc/view?usp=drive_link" target="_blank">Linkedin</a></p>
-                                <p> <a href="mailto:mayaalrak1729@gmail.com" target="_blank">Email</a></p>
-                            </div>
-                            
-                            <div class="contributor-card">
-                                <div class="contributor-img-frame">
-                                    <img src="https://i.postimg.cc/qBSWNJyt/27013.jpg" alt="Uday Surve">
-                                </div>
-                                <h4>Uday Surve</h4>
-                                <p>PRN: 125B1F133</p>
-                                <p> <a href="" target="_blank">Linkedin</a></p>
-                                <p> <a href="" target="_blank">Email</a></p>
-                            </div>
-
-                            <div class="contributor-card">
-                                <div class="contributor-img-frame">
-                                    <img src="https://i.postimg.cc/c12Pvxwg/27012.jpg" alt="Kunal Bawaskar">
-                                </div>
-                                <h4>Kunal Bawaskar</h4>
-                                <p>PRN: 125B1F131</p>
-                                <p> <a href="" target="_blank">Linkedin</a></p>
-                                <p> <a href="" target="_blank">Email</a></p>
-                            </div>
-                            <div class="contributor-card">
-                                <div class="contributor-img-frame">
-                                    <img src="https://i.postimg.cc/1zQWp45d/27011.jpg" alt="Harshvardhan Patil">
-                                </div>
-                                <h4>Harshvardhan Patil</h4>
-                                <p>PRN: 125B1F128</p>
-                                <p> <a href="" target="_blank">Linkedin</a></p>
-                                <p> <a href="" target="_blank">Email</a></p>
-                            </div>
-                            <div class="contributor-card featured">
-                                <div class="contributor-img-frame">
-                                    <img src="https://i.postimg.cc/kGhNbg5t/dinesh-kute.jpg" alt="MR. Dinesh Kute">
-                                </div>
-                                <h4>MR Dinesh Kute Sir</h4>
-                                <p>Professor of Mathlab</p>
-                                <p>Faculty Advisor</p>
-                            </div>
-                        </div>
+                        <p>Developed with passion by the Department of First Year Engineering Mathematics, PCCOE.</p>
                     </div>
                 </section>
 
                 <section id="feedback" class="section-card">
-                    <h2><i class="fas fa-comment-dots"></i> Feedback & Evaluation</h2>
+                    <h2><i class="fas fa-comment-dots"></i> Feedback</h2>
                     <div class="section-content">
-                        <p>Your feedback is important to us! Please share your experience.</p>
-                        <form class="feedback-form" id="feedbackForm">
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-paper-plane"></i>
-                                <a href="https://docs.google.com/forms/d/1_9PfPTFwoY8evb-s7cMIyLfY_igId26X-oOs4HULJc4/edit" style="color:#ffffff; text-decoration:none;"> PLEASE ENTER YOUR FEEDBACK HERE</a>
-                            </button>
-                        </form>
+                        <p>We value your suggestions! Please click the button below to share your experience or report issues with the Virtual Lab.</p>
+                        <button type="button" class="btn" style="background: #303f9f; color: white; border: none; padding: 12px 24px; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 10px;" onclick="document.location='feedback.html'">
+                            Give Feedback
+                        </button>
                     </div>
                 </section>
             </div>
         </main>
     </div>
-
-    <div class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></div>
-
-    <script>
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                document.querySelectorAll('.nav-link').forEach(item => item.classList.remove('active'));
-                this.classList.add('active');
-                const targetId = this.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    e.preventDefault();
-                    window.scrollTo({ top: targetSection.offsetTop - 20, behavior: 'smooth' });
-                }
-            });
-        });
-
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('.section-card');
-            const navLinks = document.querySelectorAll('.nav-link');
-            let currentSection = '';
-            sections.forEach(section => {
-                if (scrollY >= section.offsetTop - 100 && scrollY < section.offsetTop + section.clientHeight) {
-                    currentSection = '#' + section.getAttribute('id');
-                }
-            });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === currentSection) link.classList.add('active');
-            });
-            const st = document.getElementById('scrollTop');
-            if (window.scrollY > 300) st.classList.add('show'); else st.classList.remove('show');
-        });
-
-        document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-
-        function calculateLimit() {
-            const res = document.getElementById('resultDisplay');
-            res.textContent = "Processing calculation...";
-            setTimeout(() => { res.innerHTML = "<strong>Result updated!</strong><br><span style='color:green'>Simulation complete.</span>"; }, 500);
-        }
-
-        function loadExample(f, p) {
-            calculateLimit();
-        }
-    </script>
-    <script src="Virtual_lab.js"></script>
+    
+    <script src="Virtual lab.js"></script>
 </body>
 </html>
