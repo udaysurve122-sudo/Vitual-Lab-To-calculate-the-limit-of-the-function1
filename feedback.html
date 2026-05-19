@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institutional Feedback & Evaluation System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', 'Quicksand', system-ui, sans-serif;
+        }
+
+        body {
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 15px;
+        }
+
+        .feedback-card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 550px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            padding: 30px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .card-header h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .card-header p {
+            font-size: 13px;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .card-body {
+            padding: 35px 30px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #334155;
+            font-size: 13.5px;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        select, 
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #334155;
+            background-color: #f8fafc;
+            outline: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        input:focus, 
+        select:focus, 
+        textarea:focus {
+            border-color: #3b82f6;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        /* Simplified, professional layout for experience ratings */
+        .emoji-rating-box {
+            display: flex;
+            justify-content: space-between;
+            background: #f8fafc;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .emoji-option {
+            cursor: pointer;
+            font-size: 24px;
+            transition: all 0.2s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        .emoji-option span {
+            font-size: 11px;
+            color: #64748b;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .emoji-option input[type="radio"] {
+            display: none;
+        }
+
+        .emoji-option:hover {
+            transform: scale(1.1);
+        }
+
+        .emoji-option.active-emoji {
+            transform: scale(1.1);
+        }
+        
+        .emoji-option.active-emoji span {
+            color: #2563eb;
+            font-weight: 700;
+        }
+
+        .issues-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            background: #f8fafc;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .issue-item {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 13px;
+            color: #475569;
+            cursor: pointer;
+        }
+
+        .issue-item input {
+            margin-right: 8px;
+            accent-color: #2563eb;
+        }
+
+        .textarea-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 6px;
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-submit:disabled {
+            background-color: #cbd5e1;
+            color: #94a3b8;
+            cursor: not-allowed;
+        }
+
+        #statusDisplay {
+            margin-top: 18px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 13.5px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="feedback-card">
+    <div class="card-header">
+        <h2>System Feedback & Evaluation</h2>
+        <p>Please submit your performance evaluations and technical observations below.</p>
+    </div>
+
+    <div class="card-body">
+        <form id="comprehensiveFeedbackForm" novalidate>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="userEmail">Email Address</label>
+                    <input type="email" id="userEmail" name="email" placeholder="name@institution.edu" required>
+                </div>
+                <div class="form-group">
+                    <label for="organisationName">Institution / Department</label>
+                    <input type="text" id="organisationName" name="org" placeholder="e.g., Department of Engineering" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="userRole">User Role</label>
+                    <select id="userRole" name="role" required>
+                        <option value="" disabled selected>Select configuration...</option>
+                        <option value="Student">Student</option>
+                        <option value="Teacher">Teacher</option>
+                        <option value="Professor">Professor</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="academicStandard">Academic Level</label>
+                    <select id="academicStandard" name="standard" required>
+                        <option value="" disabled selected>Select designation...</option>
+                        <option value="1st Year">1st Year / Undergraduate</option>
+                        <option value="2nd Year">2nd Year / Undergraduate</option>
+                        <option value="3rd Year">3rd Year / Undergraduate</option>
+                        <option value="4th Year">4th Year / Undergraduate</option>
+                        <option value="Postgraduate">Postgraduate</option>
+                        <option value="Other">Other / Faculty Staff</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>System Experience Rating</label>
+                <div class="emoji-rating-box">
+                    <label class="emoji-option">
+                        <input type="radio" name="rating" value="Unsatisfactory" required>
+                        <div>🙁</div>
+                        <span>Unsatisfactory</span>
+                    </label>
+                    <label class="emoji-option">
+                        <input type="radio" name="rating" value="Satisfactory">
+                        <div>😐</div>
+                        <span>Satisfactory</span>
+                    </label>
+                    <label class="emoji-option">
+                        <input type="radio" name="rating" value="Good">
+                        <div>🙂</div>
+                        <span>Good</span>
+                    </label>
+                    <label class="emoji-option">
+                        <input type="radio" name="rating" value="Excellent">
+                        <div>😀</div>
+                        <span>Excellent</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Technical Anomalies Identified (Select all that apply)</label>
+                <div class="issues-container">
+                    <label class="issue-item"><input type="checkbox" name="technicalIssues" value="Latency / Slow Loading"> High Latency / Slow Loading</label>
+                    <label class="issue-item"><input type="checkbox" name="technicalIssues" value="Navigation / UI Issues"> Navigation / Interface Issues</label>
+                    <label class="issue-item"><input type="checkbox" name="technicalIssues" value="Authentication Failure"> Access / Authentication Failures</label>
+                    <label class="issue-item"><input type="checkbox" name="technicalIssues" value="Broken Hyperlinks"> Broken Components / Hyperlinks</label>
+                    <label class="issue-item"><input type="checkbox" name="technicalIssues" value="Ambiguous Instructions"> Ambiguous Instructions</label>
+                    <label class="issue-item"><input type="checkbox" name="technicalIssues" value="Unclassified Error"> Unclassified Technical Anomaly</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="suggestionsBox">Additional Comments & Suggestions</label>
+                <textarea id="suggestionsBox" name="suggestions" rows="3" maxlength="500" placeholder="Provide clear technical feedback or system improvement notes..." required></textarea>
+                <div class="textarea-meta">
+                    <span id="validationWarning" style="color: #dc3545; font-weight: 700;"></span>
+                    <span id="charCounter">0 / 500 characters</span>
+                </div>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-submit">Submit Feedback</button>
+        </form>
+        
+        <div id="statusDisplay"></div>
+    </div>
+</div>
+
+<script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzRmSunOp9IKG5KYD7FOYZQU2jAKlLg6oL7w4bLs00RF7lyRp7rCvyHrlQOKXMLFHow/exec'; 
+
+    const form = document.getElementById('comprehensiveFeedbackForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusDisplay = document.getElementById('statusDisplay');
+    const textArea = document.getElementById('suggestionsBox');
+    const charCounter = document.getElementById('charCounter');
+    const validationWarning = document.getElementById('validationWarning');
+    const emojiOptions = document.querySelectorAll('.emoji-option');
+    const emailInput = document.getElementById('userEmail');
+
+    emojiOptions.forEach(option => {
+        const input = option.querySelector('input[type="radio"]');
+        input.addEventListener('change', () => {
+            emojiOptions.forEach(el => el.classList.remove('active-emoji'));
+            if (input.checked) {
+                option.classList.add('active-emoji');
+            }
+        });
+    });
+
+    textArea.addEventListener('input', (e) => {
+        const count = e.target.value.length;
+        charCounter.textContent = `${count} / 500 characters`;
+    });
+
+    function parseFormValidation() {
+        validationWarning.textContent = "";
+        const emailFilter = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!emailFilter.test(emailInput.value.trim())) {
+            validationWarning.textContent = "Please enter a valid institutional email address.";
+            return false;
+        }
+        if (!form.checkValidity()) {
+            validationWarning.textContent = "Please complete all required form fields.";
+            return false;
+        }
+        return true;
+    }
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!parseFormValidation()) return;
+
+        submitBtn.disabled = true;
+        statusDisplay.style.display = 'block';
+        statusDisplay.style.backgroundColor = '#f1f5f9';
+        statusDisplay.style.color = '#1e3a8a';
+        statusDisplay.style.border = '1px solid #cbd5e1';
+        statusDisplay.innerHTML = "Processing request... Transmitting dataset securely.";
+
+        try {
+            // CRITICAL FIX: Convert form data directly into URLSearchParams 
+            // This ensures standard Content-Type headers that bypass restrictive CORS pre-flight checks
+            const checkedIssues = [];
+            document.querySelectorAll('input[name="technicalIssues"]:checked').forEach(cb => {
+                checkedIssues.push(cb.value);
+            });
+
+            const params = new URLSearchParams();
+            params.append('email', form.email.value);
+            params.append('org', form.org.value);
+            params.append('role', form.role.value);
+            params.append('standard', form.standard.value);
+            params.append('rating', form.querySelector('input[name="rating"]:checked').value);
+            params.append('issues', checkedIssues.join(', ') || 'None');
+            params.append('suggestions', form.suggestions.value);
+
+            // Fetch configured with mode: 'no-cors' to seamlessly handle dynamic Google App Apps Script redirect pipelines
+            await fetch(SCRIPT_URL, { 
+                method: 'POST', 
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: params.toString()
+            });
+
+            // Since 'no-cors' treats responses as opaque (preventing errors from blocking execution),
+            // we assume delivery success here.
+            statusDisplay.style.backgroundColor = '#f0fdf4';
+            statusDisplay.style.color = '#166534';
+            statusDisplay.style.border = '1px solid #bbf7d0';
+            statusDisplay.innerHTML = "Success! Feedback record securely integrated.";
+
+            form.reset();
+            emojiOptions.forEach(el => el.classList.remove('active-emoji'));
+            charCounter.textContent = `0 / 500 characters`;
+
+        } catch (err) {
+            statusDisplay.style.backgroundColor = '#fef2f2';
+            statusDisplay.style.color = '#991b1b';
+            statusDisplay.style.border = '1px solid #fca5a5';
+            statusDisplay.innerHTML = "Network transmission error. Please re-verify your connection profile and retry.";
+        } finally {
+            submitBtn.disabled = false;
+            setTimeout(() => {
+                statusDisplay.style.display = 'none';
+            }, 6000);
+        }
+    });
+</script>
+
+</body>
+</html>
